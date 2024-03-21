@@ -1,0 +1,10 @@
+Configuração da conta local do GIT:
+git config --global user.name komachi1ne
+git config --global user.email isabellevasconcelos862@gmail.com
+
+
+Criar um projeto AspNet MVC
+dotnet new mvc -o Receita
+
+Executar o projeto
+dotnet watch run
