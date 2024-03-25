@@ -1,0 +1,182 @@
+﻿[
+  {
+    "Numero": 1,
+    "Nome": "Naked cake",
+    "Descricao": "Bolo pelado de chocolate com recheio de leite ninho e morango.",
+    "Receita": "Bolo",
+    "Tipo": ["Planta", "Venenoso"],
+    "Preparo": "",
+    "Imagem": "\\img\\001.png"
+  },
+  {
+    "Numero": 2,
+    "Nome": "White cake",
+    "Descricao": "Bolo pelado de massa branca com essência de baunilha e recheio de leite ninho decorado com frutas.",
+    "Receita": "Bolo",
+    "Tipo": ["Planta", "Venenoso"],
+    "Preparo": "",
+    "Imagem": "\\img\\002.png"
+  },
+  {
+    "Numero": 3,
+    "Nome": "chocolate pie",
+    "Descricao": "Torta com recheio de brigadeiro branco com cobertura e raspas de chocolate.",
+    "Receita": "Torta",
+    "Tipo": ["Planta", "Venenoso"],
+    "Preparo": "",
+    "Imagem": "\\img\\003.png"
+  },
+  {
+    "Numero": 4,
+    "Nome": "Corn cake",
+    "Descricao": "Bolo de milho simples.",
+    "Receita": "Bolo",
+    "Tipo": ["Planta", "Venenoso"],
+    "Preparo": "",
+    "Imagem": "\\img\\004.png"
+  },
+  {
+    "Numero": 5,
+    "Nome": "Lemon pie",
+    "Descricao": "Torta de limão com raspas da casca do limão.",
+    "Receita": "Torta",
+    "Tipo": ["Planta", "Venenoso"],
+    "Preparo": "",
+    "Imagem": "\\img\\005.png"
+  },
+  {
+    "Numero": 6,
+    "Nome": "Vanilla pie",
+    "Descricao": "Torta simples de baunilha.",
+    "Receita": "Torta",
+    "Tipo": ["Planta", "Venenoso"],
+    "Preparo": "",
+    "Imagem": "\\img\\006.png"
+  },
+  {
+    "Numero": 7,
+    "Nome": "Pie brigadeiro",
+    "Descricao": "Torta com recheio de brigadeiro e cobertura de ganache de chocolate.",
+    "Receita": "Torta",
+    "Tipo": ["Planta", "Venenoso"],
+    "Preparo": "",
+    "Imagem": "\\img\\007.png"
+  },
+  {
+    "Numero": 8,
+    "Nome": "Cake pie",
+    "Descricao": "Bolo/torta de chocolate branco e ao leite, decorado com raspas de chocolate meio amargo e morango.",
+    "Receita": "Torta",
+    "Tipo": ["Planta", "Venenoso"],
+    "Preparo": "",
+    "Imagem": "\\img\\008.png"
+  },
+  {
+    "Numero": 9,
+    "Nome": "Red velvet",
+    "Descricao": "Bolo levemente amanteigado e com um discreto sabor de chocolate. A sua massa é de cor vermelha, o que contrasta com o branco do creme queijo no recheio e cobertura.",
+    "Receita": "Bolo",
+    "Tipo": ["Planta", "Venenoso"],
+    "Preparo": "",
+    "Imagem": "\\img\\009.png"
+  },
+  {
+    "Numero": 10,
+    "Nome": "Passion fruit pie",
+    "Descricao": "Torta de mousse de maracujá decorado com morango.",
+    "Receita": "Torta",
+    "Tipo": ["Planta", "Venenoso"],
+    "Preparo": "",
+    "Imagem": "\\img\\010.png"
+  },
+  {
+    "Numero": 11,
+    "Nome": "Batata rústica",
+    "Descricao": "Batata assada com cenoura e frango.",
+    "Receita": "Salgado",
+    "Tipo": ["Planta", "Venenoso"],
+    "Preparo": "",
+    "Imagem": "\\img\\011.png"
+  },
+  {
+    "Numero": 12,
+    "Nome": "Almôndega",
+    "Descricao": "Bolinho de carne moída.",
+    "Receita": "Salgado",
+    "Tipo": ["Planta", "Venenoso"],
+    "Preparo": "",
+    "Imagem": "\\img\\012.png"
+  },
+  {
+    "Numero": 13,
+    "Nome": "Macarrão",
+    "Descricao": "Macarrão com molho de tomate e bife.",
+    "Receita": "Refeição",
+    "Tipo": ["Planta", "Venenoso"],
+    "Preparo": "",
+    "Imagem": "\\img\\013.png"
+  },
+  {
+    "Numero": 14,
+    "Nome": "Sopão",
+    "Descricao": "Sopa de macarrão espaguete com carne de panela.",
+    "Receita": "Refeição",
+    "Tipo": ["Planta", "Venenoso"],
+    "Preparo": "",
+    "Imagem": "\\img\\014.png"
+  },
+  {
+    "Numero": 15,
+    "Nome": "Bobó de camarão",
+    "Descricao": "Sopa de camarão.",
+    "Receita": "Refeição",
+    "Tipo": ["Planta", "Venenoso"],
+    "Preparo": "",
+    "Imagem": "\\img\\015.png"
+  },
+  {
+    "Numero": 16,
+    "Nome": "Feijão de Corda",
+    "Descricao": "Feijão de corda com calabresa, farofa e cebolinha.",
+    "Receita": "Refeição",
+    "Tipo": ["Planta", "Venenoso"],
+    "Preparo": "",
+    "Imagem": "\\img\\016.png"
+  },
+  {
+    "Numero": 17,
+    "Nome": "Lentilha",
+    "Descricao": "Lentilha cozida com bacon, linguiça, cebola, alho e louro.",
+    "Receita": "Refeição",
+    "Tipo": ["Planta", "Venenoso"],
+    "Preparo": "",
+    "Imagem": "\\img\\017.png"
+  },
+  {
+    "Numero": 18,
+    "Nome": "Arroz doce",
+    "Descricao": "prato feito de arroz cozido em leite e açúcar, polvilhado de canela.",
+    "Receita": "Doce",
+    "Tipo": ["Planta", "Venenoso"],
+    "Preparo": "",
+    "Imagem": "\\img\\018.png"
+  },
+  {
+    "Numero": 19,
+    "Nome": "Pavê duo",
+    "Descricao": "Pavê com recheio de chocolate e de leite ninho.",
+    "Receita": "Doce",
+    "Tipo": ["Planta", "Venenoso"],
+    "Preparo": "",
+    "Imagem": "\\img\\019.png"
+  },
+  {
+    "Numero": 20,
+    "Nome": "Enroladinho de salsicha",
+    "Descricao": "Massa de pastel enrolada na sasicha.",
+    "Receita": "Refeição",
+    "Tipo": ["Planta", "Venenoso"],
+    "Preparo": "",
+    "Imagem": "\\img\\020.png"
+  }
+]
