@@ -1,4 +1,5 @@
 using System.Diagnostics;
+using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 using Receita.Models;
 
@@ -15,6 +16,12 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        List <Receitas> receitas = [];
+        using (StreamReader leitor = new("Data\\receitas.json"))
+        {
+            string dados = leitor.ReadToEnd();
+            receitas = JsonSerializer.Deserialize<List<Receitas>>(dados);
+        }
         return View();
     }
 

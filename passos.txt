@@ -9,6 +9,11 @@ dotnet new mvc -o Receita
 Executar o projeto
 dotnet watch run
 
+using System.Diagnostics;
+using Microsoft.AspNetCore.Mvc;
+using Receita.Models;
+
+
 
 
 
