@@ -22,7 +22,14 @@ public class HomeController : Controller
             string dados = leitor.ReadToEnd();
             receitas = JsonSerializer.Deserialize<List<Receitas>>(dados);
         }
-        return View();
+        List<Tipo> tipos = [];
+        using (StreamReader leitor = new("Data\\tipos.json"))
+        {
+            string dados = leitor.ReadToEnd();
+            tipos = JsonSerializer.Deserialize<List<Tipo>>(dados);
+        }
+        ViewData["Tipos"] = tipos;
+        return View(receitas);
     }
 
     public IActionResult Privacy()

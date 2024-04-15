@@ -6,6 +6,6 @@ namespace Receita.Models;
         public string Nome { get; set; }
         public string Descricao { get; set; }
         public List<string> Tipo { get; set; } = [];
-        public double Preparo { get; set; }
+        public string Preparo { get; set; }
         public string Imagem { get; set; }
     }

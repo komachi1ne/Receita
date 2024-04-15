@@ -1,405 +1,71 @@
 ﻿@model List<Receitas>
 @{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
+    var tipos = (List<Tipo>)ViewData["Tipos"];
+    string Cor(string nome)
+    {
+        return tipos
+        .Where(t => t.Nome == nome)
+        .Select(t => t.Cor)
+        .FirstOrDefault();
+    }
 }
 
-        <section class="pt-5 pb-3 text-center container">
-            <div class="row">
-                <div class="col mx-auto">
-                    <h1>Receitas</h1>
-                    <div class="group">
-                        <button id="btn-all" class="btn btn-md my-2 text-white bg-secondary btn-filter">Ver
-                            Todos</button>
-                        <button id="btn-aço" class="btn btn-sm my-2 text-white btn-filter"
-                            style="background-color:rgb(110, 69, 15)">Bolo</button>
-                        <button id="btn-aço" class="btn btn-sm my-2 text-white btn-filter"
-                            style="background-color:rgb(146, 93, 156)">Doce</button>
-                        <button id="btn-aço" class="btn btn-sm my-2 text-white btn-filter"
-                            style="background-color:#76e">Torta</button>
-                        <button id="btn-aço" class="btn btn-sm my-2 text-white btn-filter"
-                            style="background-color:rgb(206, 138, 36)">Salgado</button>
-                        <button id="btn-aço" class="btn btn-sm my-2 text-white btn-filter"
-                            style="background-color:rgb(212, 114, 85)">Refeição</button>
-                        <button id="btn-aço" class="btn btn-sm my-2 text-white btn-filter"
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="album py-5 bg-light">
-            <div class="container">
-
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
-
-                    @foreach (var receita in Model)
-                    {
-                    <!-- Card Pokemon - Inicio -->
-                    <div class="col">
-                        <div class="card shadow-sm cursor-pointer Bolo" onclick="GetInfo(001)">
-                            <img src="img/001.jpg" class="card-img-top" width="100%" height="300"
-                                alt="Naked Cake" />
-                            <div class="card-body">
-                                <p class="card-text mb-0">Nº 001</p>
-                                <h3 class="card-title">Naked Cake</h3>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="#" class="btn my-2 text-white" style="background-color:rgb(110, 69, 15)">Bolo</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card Pokemon - Fim -->
-
-                    <!-- Card Pokemon - Inicio -->
-                    <div class="col">
-                        <div class="card shadow-sm cursor-pointer Bolo" onclick="GetInfo(002)">
-                            <img src="img/002.jpg" class="card-img-top" width="100%" height="300"
-                                alt="White cake" />
-                            <div class="card-body">
-                                <p class="card-text mb-0">Nº 002</p>
-                                <h3 class="card-title">White cake</h3>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="#" class="btn my-2 text-white" style="background-color:rgb(110, 69, 15)">Bolo</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card Pokemon - Fim -->
-
-                    <!-- Card Pokemon - Inicio -->
-                    <div class="col">
-                        <div class="card shadow-sm cursor-pointer Torta" onclick="GetInfo(003)">
-                            <img src="img/003.jpg" class="card-img-top" width="100%" height="300"
-                                alt="Venusaur" />
-                            <div class="card-body">
-                                <p class="card-text mb-0">Nº 003</p>
-                                <h3 class="card-title">Chocolate pie</h3>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="#" class="btn my-2 text-white" style="background-color:#76e">Torta</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card Pokemon - Fim -->
-
-                    <!-- Card Pokemon - Inicio -->
-                    <div class="col">
-                        <div class="card shadow-sm cursor-pointer Bolo" onclick="GetInfo(004)">
-                            <img src="img/004.jpg" class="card-img-top" width="100%" height="300"
-                                alt="Corn cake" />
-                            <div class="card-body">
-                                <p class="card-text mb-0">Nº 004</p>
-                                <h3 class="card-title">Corn cake</h3>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="#" class="btn my-2 text-white" style="background-color:rgb(110, 69, 15)">Bolo</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card Pokemon - Fim -->
-
-                    <!-- Card Pokemon - Inicio -->
-                    <div class="col">
-                        <div class="card shadow-sm cursor-pointer Torta" onclick="GetInfo(005)">
-                            <img src="img/005.jpg" class="card-img-top" width="100%" height="300"
-                                alt="Lemon pie" />
-                            <div class="card-body">
-                                <p class="card-text mb-0">Nº 005</p>
-                                <h3 class="card-title">Lemon pie</h3>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="#" class="btn my-2 text-white" style="background-color:#76e">Torta</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card Pokemon - Fim -->
-
-                    <!-- Card Pokemon - Inicio -->
-                    <div class="col">
-                        <div class="card shadow-sm cursor-pointer Torta" onclick="GetInfo(006)">
-                            <img src="img/006.jpg" class="card-img-top" width="100%" height="300"
-                                alt="Vanilla pie" />
-                            <div class="card-body">
-                                <p class="card-text mb-0">Nº 006</p>
-                                <h3 class="card-title">Vanilla pie</h3>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="#" class="btn my-2 text-white" style="background-color:#76e">Torta</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card Pokemon - Fim -->
-
-                    <!-- Card Pokemon - Inicio -->
-                    <div class="col">
-                        <div class="card shadow-sm cursor-pointer Torta" onclick="GetInfo(007)">
-                            <img src="img/007.jpg" class="card-img-top" width="100%" height="300"
-                                alt="Pie brigadeiro" />
-                            <div class="card-body">
-                                <p class="card-text mb-0">Nº 007</p>
-                                <h3 class="card-title">Pie brigadeiro</h3>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="#" class="btn my-2 text-white" style="background-color:#76e">Torta</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card Pokemon - Fim -->
-
-                    <!-- Card Pokemon - Inicio -->
-                    <div class="col">
-                        <div class="card shadow-sm cursor-pointer Torta" onclick="GetInfo(8)">
-                            <img src="img/008.jpg" class="card-img-top" width="100%" height="300"
-                                alt="Cake pie" />
-                            <div class="card-body">
-                                <p class="card-text mb-0">Nº 008</p>
-                                <h3 class="card-title">Cake pie</h3>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="#" class="btn my-2 text-white" style="background-color:#76e">Torta</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card Pokemon - Fim -->
-
-                    <!-- Card Pokemon - Inicio -->
-                    <div class="col">
-                        <div class="card shadow-sm cursor-pointer Bolo" onclick="GetInfo(9)">
-                            <img src="img/009.jpg" class="card-img-top" width="100%" height="300"
-                                alt="Red velvet" />
-                            <div class="card-body">
-                                <p class="card-text mb-0">Nº 009</p>
-                                <h3 class="card-title">Red velvet</h3>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="#" class="btn my-2 text-white" style="background-color:rgb(110, 69, 15)">Bolo</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card Pokemon - Fim -->
-
-                    <!-- Card Pokemon - Inicio -->
-                    <div class="col">
-                        <div class="card shadow-sm cursor-pointer Torta" onclick="GetInfo(010)">
-                            <img src="img/010.jpg" class="card-img-top" width="100%" height="300"
-                                alt="Passion fruit pie" />
-                            <div class="card-body">
-                                <p class="card-text mb-0">Nº 010</p>
-                                <h3 class="card-title">Passion fruit pie</h3>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="#" class="btn my-2 text-white" style="background-color:#76e">Torta</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card Pokemon - Fim -->
-
-                    <!-- Card Pokemon - Inicio -->
-                    <div class="col">
-                        <div class="card shadow-sm cursor-pointer Refeição" onclick="GetInfo(011)">
-                            <img src="img/011.jpg" class="card-img-top" width="100%" height="300"
-                                alt="Batata Rústica" />
-                            <div class="card-body">
-                                <p class="card-text mb-0">Nº 011</p>
-                                <h3 class="card-title">Batata Rústica</h3>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="#" class="btn my-2 text-white" style="background-color:rgb(212, 114, 85)">Refeição</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card Pokemon - Fim -->
-
-                    <!-- Card Pokemon - Inicio -->
-                    <div class="col">
-                        <div class="card shadow-sm cursor-pointer Refeição" onclick="GetInfo(012)">
-                            <img src="img/012.jpg" class="card-img-top" width="100%" height="300"
-                                alt="Almôndega" />
-                            <div class="card-body">
-                                <p class="card-text mb-0">Nº 012</p>
-                                <h3 class="card-title">Almôndega</h3>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="#" class="btn my-2 text-white" style="background-color:rgb(212, 114, 85)">Refeição</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card Pokemon - Fim -->
-                    
-                                        <!-- Card Pokemon - Inicio -->
-                    <div class="col">
-                        <div class="card shadow-sm cursor-pointer Refeição" onclick="GetInfo(012)">
-                            <img src="img/013.jpg" class="card-img-top" width="100%" height="300"
-                                alt="Macarrão" />
-                            <div class="card-body">
-                                <p class="card-text mb-0">Nº 013</p>
-                                <h3 class="card-title">Macarrão</h3>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="#" class="btn my-2 text-white" style="background-color:rgb(212, 114, 85)">Refeição</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card Pokemon - Fim -->
-
-                                        <!-- Card Pokemon - Inicio -->
-                    <div class="col">
-                        <div class="card shadow-sm cursor-pointer Refeição" onclick="GetInfo(012)">
-                            <img src="img/014.jpg" class="card-img-top" width="100%" height="300"
-                                alt="Sopão" />
-                            <div class="card-body">
-                                <p class="card-text mb-0">Nº 014</p>
-                                <h3 class="card-title">Sopão</h3>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="#" class="btn my-2 text-white" style="background-color:rgb(212, 114, 85)">Refeição</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card Pokemon - Fim -->
-
-                                        <!-- Card Pokemon - Inicio -->
-                    <div class="col">
-                        <div class="card shadow-sm cursor-pointer Refeição" onclick="GetInfo(012)">
-                            <img src="img/015.jpg" class="card-img-top" width="100%" height="300"
-                                alt="Bobó de camarão" />
-                            <div class="card-body">
-                                <p class="card-text mb-0">Nº 015</p>
-                                <h3 class="card-title">Bobó de camarão</h3>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="#" class="btn my-2 text-white" style="background-color:rgb(212, 114, 85)">Refeição</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card Pokemon - Fim -->
-
-                                        <!-- Card Pokemon - Inicio -->
-                    <div class="col">
-                        <div class="card shadow-sm cursor-pointer Refeição" onclick="GetInfo(012)">
-                            <img src="img/016.jpg" class="card-img-top" width="100%" height="300"
-                                alt="Feijão de Corda" />
-                            <div class="card-body">
-                                <p class="card-text mb-0">Nº 016</p>
-                                <h3 class="card-title">Feijão de Corda</h3>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="#" class="btn my-2 text-white" style="background-color:rgb(212, 114, 85)">Refeição</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card Pokemon - Fim -->
-
-                                        <!-- Card Pokemon - Inicio -->
-                    <div class="col">
-                        <div class="card shadow-sm cursor-pointer Refeição" onclick="GetInfo(012)">
-                            <img src="img/017.jpg" class="card-img-top" width="100%" height="300"
-                                alt="Lentilha" />
-                            <div class="card-body">
-                                <p class="card-text mb-0">Nº 017</p>
-                                <h3 class="card-title">Lentilha</h3>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="#" class="btn my-2 text-white" style="background-color:rgb(212, 114, 85)">Refeição</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card Pokemon - Fim -->
-
-                                        <!-- Card Pokemon - Inicio -->
-                    <div class="col">
-                        <div class="card shadow-sm cursor-pointer Doce" onclick="GetInfo(012)">
-                            <img src="img/018.jpg" class="card-img-top" width="100%" height="300"
-                                alt="Arroz doce" />
-                            <div class="card-body">
-                                <p class="card-text mb-0">Nº 018</p>
-                                <h3 class="card-title">Arroz doce</h3>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="#" class="btn my-2 text-white" style="background-color:rgb(146, 93, 156)">Doce</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card Pokemon - Fim -->
-
-                                        <!-- Card Pokemon - Inicio -->
-                    <div class="col">
-                        <div class="card shadow-sm cursor-pointer Doce" onclick="GetInfo(012)">
-                            <img src="img/019.jpg" class="card-img-top" width="100%" height="300"
-                                alt="Pavê duo" />
-                            <div class="card-body">
-                                <p class="card-text mb-0">Nº 019</p>
-                                <h3 class="card-title">Pavê duo</h3>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="#" class="btn my-2 text-white" style="background-color:rgb(146, 93, 156)">Doce</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card Pokemon - Fim -->
-
-                                        <!-- Card Pokemon - Inicio -->
-                    <div class="col">
-                        <div class="card shadow-sm cursor-pointer Refeição" onclick="GetInfo(012)">
-                            <img src="img/020.jpg" class="card-img-top" width="100%" height="300"
-                                alt="Enroladinho de salsicha" />
-                            <div class="card-body">
-                                <p class="card-text mb-0">Nº 020</p>
-                                <h3 class="card-title">Enroladinho de salsicha</h3>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <a href="#" class="btn my-2 text-white" style="background-color:rgb(212, 114, 85)">Refeição</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Card Pokemon - Fim -->
-
-                    }
-
-                    <div id="zeroPokemon" class="col-lg-12 text-center" hidden>
-                        <h1 class="my-3 text-danger">Nenhuma receita encontrada</h1>
-                    </div>
-                </div>
-
+<section class="pt-5 pb-3 text-center container">
+    <div class="row">
+        <div class="col mx-auto">
+            <h1>Receitas</h1>
+            <div class="group">
+                <button id="btn-all" class="btn btn-md my-2 text-white bg-dark btn-filter">
+                    Ver Todos
+                </button>
+                @foreach (var tipo in tipos)
+                {
+                    <button id="btn-aço" class="btn btn-sm my-2 text-white btn-filter"
+                    style="background-color:@tipo.Cor">@tipo.Nome
+                    </button>
+                }
 
             </div>
         </div>
+    </div>
+</section>
+
+<div class="album py-5 bg-light">
+    <div class="container">
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-3">
+
+            @foreach (var receita in Model)
+            {
+                <!-- Card Pokemon - Inicio -->
+                <div class="col">
+                    <div class="card shadow-sm cursor-pointer @string.Join(' ', receita.Tipo)">
+                        <img src="@receita.Imagem" class="card-img-top" width="100%" height="300" alt="@receita.Nome" />
+                        <div class="card-body">
+                            <p class="card-text mb-0">Nº @receita.Numero.ToString("000")</p>
+                            <h3 class="card-title">@receita.Nome</h3>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="btn-group">
+                                    @foreach (var tipo in receita.Tipo)
+                                    {
+                                    <a href="#" class="btn my-2 text-white"
+                                        style="background-color:@Cor(tipo)">@tipo</a>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card Pokemon - Fim -->
+
+               
+            }
+            <div id="zeroPokemon" class="col-lg-12 text-center" hidden>
+                <h1 class="my-3 text-danger">Nenhuma receita encontrada</h1>
+            </div>
+        </div>
+
+
+    </div>
+</div>
